@@ -1,0 +1,62 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[animation]
+
+compatibility/default_parent_skeleton_in_mesh_instance_3d=true
+
+[application]
+
+config/name="AI Quest Demo"
+run/main_scene="res://scenes/start_menu.tscn"
+config/features=PackedStringArray("4.7", "GL Compatibility")
+
+[autoload]
+
+LlmConfig="*res://scripts/llm_config.gd"
+CultureData="*res://scripts/culture_data.gd"
+WorldData="*res://scripts/world_data.gd"
+RegionGenerator="*res://scripts/region_generator.gd"
+WeaponData="*res://scripts/weapon_data.gd"
+EnemyData="*res://scripts/enemy_data.gd"
+PlayerProfile="*res://scripts/player_profile.gd"
+QuestManager="*res://scripts/quest_manager.gd"
+LocationGenerator="*res://scripts/location_generator.gd"
+PropLibrary="*res://scripts/prop_library.gd"
+SceneDecorator="*res://scripts/scene_decorator.gd"
+NpcMemory="*res://scripts/npc_memory.gd"
+NpcRelations="*res://scripts/npc_relations.gd"
+WorldState="*res://scripts/world_state.gd"
+DialogueGenerator="*res://scripts/dialogue_generator.gd"
+NpcGenerator="*res://scripts/npc_generator.gd"
+StoryDirector="*res://scripts/story_director.gd"
+SaveSystem="*res://scripts/save_system.gd"
+PortraitLibrary="*res://scripts/portrait_library.gd"
+PortraitGenerator="*res://scripts/portrait_generator.gd"
+WalkSheetGenerator="*res://scripts/walk_sheet_generator.gd"
+AttackSheetGenerator="*res://scripts/attack_sheet_generator.gd"
+BuildingGenerator="*res://scripts/building_generator.gd"
+RewardLibrary="*res://scripts/reward_library.gd"
+RewardIconGenerator="*res://scripts/reward_icon_generator.gd"
+InteriorManager="*res://scripts/interior_manager.gd"
+
+[display]
+
+window/size/viewport_width=960
+window/size/viewport_height=540
+window/size/window_width_override=1280
+window/size/window_height_override=720
+window/stretch/mode="canvas_items"
+
+[rendering]
+
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
+environment/defaults/default_clear_color=Color(0.1, 0.12, 0.11, 1)

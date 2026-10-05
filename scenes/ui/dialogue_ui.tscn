@@ -1,0 +1,124 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/dialogue_ui.gd" id="1_dlg"]
+
+[node name="DialogueUI" type="Control"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_dlg")
+
+[node name="Panel" type="Panel" parent="."]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 40.0
+offset_top = -340.0
+offset_right = -40.0
+offset_bottom = -24.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Speaker" type="Label" parent="Panel"]
+offset_left = 24.0
+offset_top = 12.0
+offset_right = 700.0
+offset_bottom = 38.0
+text = "村民"
+
+[node name="Relation" type="Label" parent="Panel"]
+offset_left = 24.0
+offset_top = 38.0
+offset_right = 820.0
+offset_bottom = 62.0
+theme_override_colors/font_color = Color(0.62, 0.72, 0.95, 1)
+theme_override_font_sizes/font_size = 13
+text = "关系：生疏（好感 0）"
+
+[node name="Body" type="RichTextLabel" parent="Panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 24.0
+offset_top = 66.0
+offset_right = -24.0
+offset_bottom = -104.0
+grow_horizontal = 2
+grow_vertical = 2
+bbcode_enabled = true
+text = "……"
+
+[node name="InputRow" type="HBoxContainer" parent="Panel"]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 24.0
+offset_top = -100.0
+offset_right = -24.0
+offset_bottom = -62.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = 6
+
+[node name="SayInput" type="LineEdit" parent="Panel/InputRow"]
+size_flags_horizontal = 3
+placeholder_text = "对他说点什么……（回车发送）"
+max_length = 60
+theme_override_font_sizes/font_size = 14
+
+[node name="SendBtn" type="Button" parent="Panel/InputRow"]
+theme_override_font_sizes/font_size = 14
+text = "说"
+
+[node name="Buttons" type="HBoxContainer" parent="Panel"]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 24.0
+offset_top = -54.0
+offset_right = -24.0
+offset_bottom = -12.0
+grow_horizontal = 2
+grow_vertical = 0
+alignment = 2
+theme_override_constants/separation = 6
+
+[node name="TopicBtn" type="Button" parent="Panel/Buttons"]
+theme_override_font_sizes/font_size = 14
+text = "聊聊近况"
+
+[node name="RumorBtn" type="Button" parent="Panel/Buttons"]
+theme_override_font_sizes/font_size = 14
+text = "打听传闻"
+
+[node name="HelpBtn" type="Button" parent="Panel/Buttons"]
+theme_override_font_sizes/font_size = 14
+text = "有什么要帮忙的"
+
+[node name="AcceptBtn" type="Button" parent="Panel/Buttons"]
+theme_override_font_sizes/font_size = 14
+text = "接受任务"
+
+[node name="ReportBtn" type="Button" parent="Panel/Buttons"]
+theme_override_font_sizes/font_size = 14
+text = "复命交差"
+
+[node name="LearnBtn" type="Button" parent="Panel/Buttons"]
+visible = false
+theme_override_font_sizes/font_size = 14
+text = "跟他学这儿的话"
+
+[node name="GiftBtn" type="Button" parent="Panel/Buttons"]
+visible = false
+theme_override_font_sizes/font_size = 14
+text = "把通译符赠给他"
+
+[node name="MarryBtn" type="Button" parent="Panel/Buttons"]
+visible = false
+theme_override_font_sizes/font_size = 14
+text = "求婚"
+
+[node name="CloseBtn" type="Button" parent="Panel/Buttons"]
+theme_override_font_sizes/font_size = 14
+text = "结束对话"

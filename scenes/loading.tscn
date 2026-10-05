@@ -1,0 +1,56 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/loading.gd" id="1_loading"]
+
+[node name="Loading" type="Control"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_loading")
+
+[node name="Backdrop" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.07, 0.08, 0.1, 1)
+
+[node name="Box" type="VBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -260.0
+offset_top = -160.0
+offset_right = 260.0
+offset_bottom = 160.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 16
+
+[node name="Title" type="Label" parent="Box"]
+text = "正在为你写这一程"
+horizontal_alignment = 1
+
+[node name="Wish" type="Label" parent="Box"]
+text = ""
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Spinner" type="Control" parent="Box"]
+custom_minimum_size = Vector2(0, 64)
+mouse_filter = 2
+
+[node name="StepText" type="Label" parent="Box"]
+text = ""
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="StepBar" type="ProgressBar" parent="Box"]
+custom_minimum_size = Vector2(0, 8)
+max_value = 3.0
+value = 0.0
+show_percentage = false

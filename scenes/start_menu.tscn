@@ -1,0 +1,352 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/start_menu.gd" id="1_menu"]
+
+[node name="StartMenu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_menu")
+
+[node name="Backdrop" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.09, 0.11, 0.1, 1)
+
+[node name="Panel" type="Panel" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -240.0
+offset_top = -180.0
+offset_right = 240.0
+offset_bottom = 180.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Title" type="Label" parent="Panel"]
+offset_left = 32.0
+offset_top = 24.0
+offset_right = 448.0
+offset_bottom = 64.0
+theme_override_font_sizes/font_size = 26
+text = "AI 冒险世界"
+
+[node name="Menu" type="VBoxContainer" parent="Panel"]
+offset_left = 120.0
+offset_top = 92.0
+offset_right = 360.0
+offset_bottom = 262.0
+theme_override_constants/separation = 12
+
+[node name="NewGameBtn" type="Button" parent="Panel/Menu"]
+custom_minimum_size = Vector2(0, 40)
+text = "新游戏"
+
+[node name="ContinueBtn" type="Button" parent="Panel/Menu"]
+custom_minimum_size = Vector2(0, 40)
+text = "继续游戏"
+
+[node name="SettingsBtn" type="Button" parent="Panel/Menu"]
+custom_minimum_size = Vector2(0, 40)
+text = "设置"
+
+[node name="QuitBtn" type="Button" parent="Panel/Menu"]
+custom_minimum_size = Vector2(0, 40)
+text = "退出"
+
+[node name="Hint" type="Label" parent="Panel"]
+offset_left = 32.0
+offset_top = 296.0
+offset_right = 448.0
+offset_bottom = 348.0
+autowrap_mode = 3
+text = "当前模式"
+
+[node name="SettingsPanel" type="Panel" parent="."]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -280.0
+offset_top = -210.0
+offset_right = 280.0
+offset_bottom = 210.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Scroll" type="ScrollContainer" parent="SettingsPanel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 20.0
+offset_top = 16.0
+offset_right = -20.0
+offset_bottom = -60.0
+grow_horizontal = 2
+grow_vertical = 2
+horizontal_scroll_mode = 0
+
+[node name="Box" type="VBoxContainer" parent="SettingsPanel/Scroll"]
+size_flags_horizontal = 3
+theme_override_constants/separation = 12
+
+[node name="Title" type="Label" parent="SettingsPanel/Scroll/Box"]
+theme_override_font_sizes/font_size = 22
+text = "设置 · 大模型 API"
+
+[node name="ModeRow" type="HBoxContainer" parent="SettingsPanel/Scroll/Box"]
+theme_override_constants/separation = 10
+
+[node name="Label" type="Label" parent="SettingsPanel/Scroll/Box/ModeRow"]
+custom_minimum_size = Vector2(110, 0)
+text = "运行模式"
+
+[node name="ModeOpt" type="OptionButton" parent="SettingsPanel/Scroll/Box/ModeRow"]
+size_flags_horizontal = 3
+item_count = 2
+popup/item_0/text = "在线大模型（推荐）"
+popup/item_0/id = 0
+popup/item_1/text = "离线模板（不联网）"
+popup/item_1/id = 1
+
+[node name="BaseRow" type="HBoxContainer" parent="SettingsPanel/Scroll/Box"]
+theme_override_constants/separation = 10
+
+[node name="Label" type="Label" parent="SettingsPanel/Scroll/Box/BaseRow"]
+custom_minimum_size = Vector2(110, 0)
+text = "API 地址"
+
+[node name="BaseEdit" type="LineEdit" parent="SettingsPanel/Scroll/Box/BaseRow"]
+size_flags_horizontal = 3
+placeholder_text = "https://maas.qianwenaiapi.com/compatible-mode/v1"
+
+[node name="KeyRow" type="HBoxContainer" parent="SettingsPanel/Scroll/Box"]
+theme_override_constants/separation = 10
+
+[node name="Label" type="Label" parent="SettingsPanel/Scroll/Box/KeyRow"]
+custom_minimum_size = Vector2(110, 0)
+text = "API Key"
+
+[node name="KeyEdit" type="LineEdit" parent="SettingsPanel/Scroll/Box/KeyRow"]
+size_flags_horizontal = 3
+placeholder_text = "sk-..."
+secret = true
+
+[node name="RevealBtn" type="Button" parent="SettingsPanel/Scroll/Box/KeyRow"]
+custom_minimum_size = Vector2(64, 0)
+text = "显示"
+
+[node name="ModelRow" type="HBoxContainer" parent="SettingsPanel/Scroll/Box"]
+theme_override_constants/separation = 10
+
+[node name="Label" type="Label" parent="SettingsPanel/Scroll/Box/ModelRow"]
+custom_minimum_size = Vector2(110, 0)
+text = "模型名"
+
+[node name="ModelEdit" type="LineEdit" parent="SettingsPanel/Scroll/Box/ModelRow"]
+size_flags_horizontal = 3
+placeholder_text = "qwen-plus"
+
+[node name="ImageTitle" type="Label" parent="SettingsPanel/Scroll/Box"]
+theme_override_font_sizes/font_size = 18
+text = "AI 立绘（可选）"
+
+[node name="ImageModeRow" type="HBoxContainer" parent="SettingsPanel/Scroll/Box"]
+theme_override_constants/separation = 10
+
+[node name="Label" type="Label" parent="SettingsPanel/Scroll/Box/ImageModeRow"]
+custom_minimum_size = Vector2(110, 0)
+text = "AI 立绘"
+
+[node name="ImageModeOpt" type="OptionButton" parent="SettingsPanel/Scroll/Box/ImageModeRow"]
+size_flags_horizontal = 3
+item_count = 2
+popup/item_0/text = "开启（给每个人生成立绘）"
+popup/item_0/id = 0
+popup/item_1/text = "关闭（用默认小人）"
+popup/item_1/id = 1
+
+[node name="ProviderRow" type="HBoxContainer" parent="SettingsPanel/Scroll/Box"]
+theme_override_constants/separation = 10
+
+[node name="Label" type="Label" parent="SettingsPanel/Scroll/Box/ProviderRow"]
+custom_minimum_size = Vector2(110, 0)
+text = "生图平台"
+
+[node name="ProviderOpt" type="OptionButton" parent="SettingsPanel/Scroll/Box/ProviderRow"]
+size_flags_horizontal = 3
+item_count = 2
+popup/item_0/text = "硅基流动 SiliconFlow"
+popup/item_0/id = 0
+popup/item_1/text = "火山方舟 Agent Plan"
+popup/item_1/id = 1
+
+[node name="ImageBaseRow" type="HBoxContainer" parent="SettingsPanel/Scroll/Box"]
+theme_override_constants/separation = 10
+
+[node name="Label" type="Label" parent="SettingsPanel/Scroll/Box/ImageBaseRow"]
+custom_minimum_size = Vector2(110, 0)
+text = "生图 API"
+
+[node name="ImageBaseEdit" type="LineEdit" parent="SettingsPanel/Scroll/Box/ImageBaseRow"]
+size_flags_horizontal = 3
+placeholder_text = "https://api.siliconflow.cn/v1"
+
+[node name="ImageKeyRow" type="HBoxContainer" parent="SettingsPanel/Scroll/Box"]
+theme_override_constants/separation = 10
+
+[node name="Label" type="Label" parent="SettingsPanel/Scroll/Box/ImageKeyRow"]
+custom_minimum_size = Vector2(110, 0)
+text = "生图 Key"
+
+[node name="ImageKeyEdit" type="LineEdit" parent="SettingsPanel/Scroll/Box/ImageKeyRow"]
+size_flags_horizontal = 3
+placeholder_text = "sk-..."
+secret = true
+
+[node name="ImageRevealBtn" type="Button" parent="SettingsPanel/Scroll/Box/ImageKeyRow"]
+custom_minimum_size = Vector2(64, 0)
+text = "显示"
+
+[node name="ImageModelRow" type="HBoxContainer" parent="SettingsPanel/Scroll/Box"]
+theme_override_constants/separation = 10
+
+[node name="Label" type="Label" parent="SettingsPanel/Scroll/Box/ImageModelRow"]
+custom_minimum_size = Vector2(110, 0)
+text = "生图模型"
+
+[node name="ImageModelEdit" type="LineEdit" parent="SettingsPanel/Scroll/Box/ImageModelRow"]
+size_flags_horizontal = 3
+placeholder_text = "Qwen/Qwen-Image"
+
+[node name="ImageSizeRow" type="HBoxContainer" parent="SettingsPanel/Scroll/Box"]
+theme_override_constants/separation = 10
+
+[node name="Label" type="Label" parent="SettingsPanel/Scroll/Box/ImageSizeRow"]
+custom_minimum_size = Vector2(110, 0)
+text = "图片尺寸"
+
+[node name="ImageSizeEdit" type="LineEdit" parent="SettingsPanel/Scroll/Box/ImageSizeRow"]
+size_flags_horizontal = 3
+placeholder_text = "768x1024"
+
+[node name="RemoveBgRow" type="HBoxContainer" parent="SettingsPanel/Scroll/Box"]
+theme_override_constants/separation = 10
+
+[node name="Label" type="Label" parent="SettingsPanel/Scroll/Box/RemoveBgRow"]
+custom_minimum_size = Vector2(110, 0)
+text = "背景处理"
+
+[node name="RemoveBgCheck" type="CheckBox" parent="SettingsPanel/Scroll/Box/RemoveBgRow"]
+size_flags_horizontal = 3
+button_pressed = true
+text = "自动抠掉背景（推荐）"
+
+[node name="Msg" type="Label" parent="SettingsPanel/Scroll/Box"]
+custom_minimum_size = Vector2(0, 44)
+autowrap_mode = 3
+text = ""
+
+[node name="Btns" type="HBoxContainer" parent="SettingsPanel"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -288.0
+offset_top = -56.0
+offset_right = -24.0
+offset_bottom = -20.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_constants/separation = 12
+
+[node name="SaveBtn" type="Button" parent="SettingsPanel/Btns"]
+custom_minimum_size = Vector2(120, 36)
+text = "保存"
+
+[node name="BackBtn" type="Button" parent="SettingsPanel/Btns"]
+custom_minimum_size = Vector2(120, 36)
+text = "返回"
+
+[node name="GoalPanel" type="Panel" parent="."]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -320.0
+offset_top = -240.0
+offset_right = 320.0
+offset_bottom = 240.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Scroll" type="ScrollContainer" parent="GoalPanel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 24.0
+offset_top = 20.0
+offset_right = -24.0
+offset_bottom = -64.0
+grow_horizontal = 2
+grow_vertical = 2
+horizontal_scroll_mode = 0
+
+[node name="Box" type="VBoxContainer" parent="GoalPanel/Scroll"]
+size_flags_horizontal = 3
+theme_override_constants/separation = 10
+
+[node name="Title" type="Label" parent="GoalPanel/Scroll/Box"]
+theme_override_font_sizes/font_size = 22
+text = "你想走到什么样的结局？"
+
+[node name="Hint" type="Label" parent="GoalPanel/Scroll/Box"]
+autowrap_mode = 3
+text = "开局定下的结局，会一直牵着主线往那儿走。中途不再改。"
+
+[node name="PresetBox" type="VBoxContainer" parent="GoalPanel/Scroll/Box"]
+theme_override_constants/separation = 8
+
+[node name="CustomTitle" type="Label" parent="GoalPanel/Scroll/Box"]
+text = "或者，自己写一个你想要的结局"
+
+[node name="CustomEdit" type="TextEdit" parent="GoalPanel/Scroll/Box"]
+custom_minimum_size = Vector2(0, 84)
+placeholder_text = "比如：我想带着全村人一起搬到海边住。"
+
+[node name="CustomBtn" type="Button" parent="GoalPanel/Scroll/Box"]
+custom_minimum_size = Vector2(0, 36)
+text = "就用这个结局"
+
+[node name="Msg" type="Label" parent="GoalPanel/Scroll/Box"]
+custom_minimum_size = Vector2(0, 24)
+autowrap_mode = 3
+text = ""
+
+[node name="Btns" type="HBoxContainer" parent="GoalPanel"]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 24.0
+offset_top = -56.0
+offset_right = -24.0
+offset_bottom = -20.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = 12
+
+[node name="SkipBtn" type="Button" parent="GoalPanel/Btns"]
+custom_minimum_size = Vector2(0, 36)
+size_flags_horizontal = 3
+text = "不设定，随便走走"
+
+[node name="BackBtn" type="Button" parent="GoalPanel/Btns"]
+custom_minimum_size = Vector2(0, 36)
+size_flags_horizontal = 3
+text = "返回"

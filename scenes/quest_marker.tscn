@@ -1,0 +1,21 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/quest_marker.gd" id="1_marker"]
+
+[node name="QuestMarker" type="Node2D"]
+z_index = 20
+script = ExtResource("1_marker")
+
+[node name="Visual" type="Node2D" parent="."]
+
+[node name="Arrow" type="Polygon2D" parent="Visual"]
+color = Color(1, 0.82, 0.25, 1)
+polygon = PackedVector2Array(0, -24, 22, 16, 0, 5, -22, 16)
+
+[node name="Name" type="Label" parent="Visual"]
+offset_left = -1.0
+offset_top = 30.0
+offset_right = 239.0
+offset_bottom = 62.0
+text = "任务目标"
+horizontal_alignment = 1

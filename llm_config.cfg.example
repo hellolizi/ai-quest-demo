@@ -1,0 +1,31 @@
+; AI 任务生成配置（示例模板）
+;
+; 用法：把本文件复制成 llm_config.cfg，再填上自己的 Key。
+;   llm_config.cfg 已在 .gitignore 里，不会被提交。
+;
+; mode 可选值:
+;   mock = 离线模板生成，不联网、不需要 Key（先把游戏跑起来看效果用这个）
+;   llm  = 调用真实大模型生成
+;
+; 想换成其它兼容 OpenAI 格式的服务，只改 api_base / api_key / model 三行即可。
+[llm]
+
+mode="mock"
+api_base="https://maas.qianwenaiapi.com/compatible-mode/v1"
+api_key=""
+model="qwen3.8-flash"
+
+; ---- 生图 / 视觉模型（跟上面的文本 Key 是两码事，各填各的）----
+; 直接把你的 Key 粘到下面 api_key="" 的引号里面即可，别加空格、别加引号
+; provider 可选：
+;   siliconflow = 硅基流动；ark_plan = 火山方舟 Agent Plan；dashscope = 阿里云百炼（通义万相/千问图像）
+[image]
+
+; mock/off = 用代码画的占位房子和树；api = 真的联网生成素材
+mode="off"
+provider="dashscope"
+api_base="https://maas.qianwenaiapi.com/compatible-mode/v1"
+api_key=""
+model="qwen-image-3.0"
+size="1024x1024"
+remove_bg=true

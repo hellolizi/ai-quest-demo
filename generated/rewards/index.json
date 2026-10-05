@@ -1,0 +1,158 @@
+{
+	"mat_crystal": {
+		"aliases": [
+			"晶石"
+		],
+		"category": "",
+		"created_at": "2026-10-04T21:07:09",
+		"enabled": true,
+		"file": "icon.png",
+		"model": "doubao-seedream-5-0-pro-260628",
+		"name": "晶石",
+		"provider": "ark_plan"
+	},
+	"mat_leather": {
+		"aliases": [
+			"兽皮"
+		],
+		"category": "",
+		"created_at": "2026-10-04T21:06:36",
+		"enabled": true,
+		"file": "icon.png",
+		"model": "doubao-seedream-5-0-pro-260628",
+		"name": "兽皮",
+		"provider": "ark_plan"
+	},
+	"mat_ore_copper": {
+		"aliases": [
+			"铜矿"
+		],
+		"category": "",
+		"created_at": "2026-10-04T21:05:11",
+		"enabled": true,
+		"file": "icon.png",
+		"model": "doubao-seedream-5-0-pro-260628",
+		"name": "铜矿",
+		"provider": "ark_plan"
+	},
+	"mat_ore_iron": {
+		"aliases": [
+			"铁矿"
+		],
+		"category": "",
+		"created_at": "2026-10-04T21:04:34",
+		"enabled": true,
+		"file": "icon.png",
+		"model": "doubao-seedream-5-0-pro-260628",
+		"name": "铁矿",
+		"provider": "ark_plan"
+	},
+	"mat_wood": {
+		"aliases": [
+			"木料"
+		],
+		"category": "",
+		"created_at": "2026-10-04T21:05:51",
+		"enabled": true,
+		"file": "icon.png",
+		"model": "doubao-seedream-5-0-pro-260628",
+		"name": "木料",
+		"provider": "ark_plan"
+	},
+	"weapon_bridge_hammer": {
+		"aliases": [
+			"架桥之锤"
+		],
+		"category": "",
+		"created_at": "2026-10-04T21:00:47",
+		"enabled": true,
+		"file": "icon.png",
+		"model": "doubao-seedream-5-0-pro-260628",
+		"name": "架桥之锤",
+		"provider": "ark_plan"
+	},
+	"weapon_copper_spear": {
+		"aliases": [
+			"粗制铜矛"
+		],
+		"category": "",
+		"created_at": "2026-10-04T21:03:58",
+		"enabled": true,
+		"file": "icon.png",
+		"model": "doubao-seedream-5-0-pro-260628",
+		"name": "粗制铜矛",
+		"provider": "ark_plan"
+	},
+	"weapon_hand_axe": {
+		"aliases": [
+			"粗制手斧"
+		],
+		"category": "",
+		"created_at": "2026-10-04T21:03:23",
+		"enabled": true,
+		"file": "icon.png",
+		"model": "doubao-seedream-5-0-pro-260628",
+		"name": "粗制手斧",
+		"provider": "ark_plan"
+	},
+	"weapon_hermit_dagger": {
+		"aliases": [
+			"独行之匕"
+		],
+		"category": "",
+		"created_at": "2026-10-04T21:01:23",
+		"enabled": true,
+		"file": "icon.png",
+		"model": "doubao-seedream-5-0-pro-260628",
+		"name": "独行之匕",
+		"provider": "ark_plan"
+	},
+	"weapon_hunt_bow": {
+		"aliases": [
+			"粗制猎弓"
+		],
+		"category": "",
+		"created_at": "2026-10-04T21:02:42",
+		"enabled": true,
+		"file": "icon.png",
+		"model": "doubao-seedream-5-0-pro-260628",
+		"name": "粗制猎弓",
+		"provider": "ark_plan"
+	},
+	"weapon_iron_sword": {
+		"aliases": [
+			"粗制铁剑"
+		],
+		"category": "",
+		"created_at": "2026-10-04T21:02:00",
+		"enabled": true,
+		"file": "icon.png",
+		"model": "doubao-seedream-5-0-pro-260628",
+		"name": "粗制铁剑",
+		"provider": "ark_plan"
+	},
+	"weapon_wanderer_bow": {
+		"aliases": [
+			"远行之弓"
+		],
+		"category": "",
+		"created_at": "2026-10-04T21:00:07",
+		"enabled": true,
+		"file": "icon.png",
+		"model": "doubao-seedream-5-0-pro-260628",
+		"name": "远行之弓",
+		"provider": "ark_plan"
+	},
+	"weapon_warden_blade": {
+		"aliases": [
+			"守望之刃"
+		],
+		"category": "",
+		"created_at": "2026-10-04T20:59:21",
+		"enabled": true,
+		"file": "icon.png",
+		"model": "doubao-seedream-5-0-pro-260628",
+		"name": "守望之刃",
+		"provider": "ark_plan"
+	}
+}

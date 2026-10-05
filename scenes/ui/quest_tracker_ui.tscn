@@ -1,0 +1,39 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/quest_tracker_ui.gd" id="1_tracker"]
+
+[node name="QuestTrackerUI" type="Control"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_tracker")
+
+[node name="Panel" type="Panel" parent="."]
+offset_left = 20.0
+offset_top = 60.0
+offset_right = 360.0
+offset_bottom = 158.0
+
+[node name="Title" type="Label" parent="Panel"]
+offset_left = 16.0
+offset_top = 10.0
+offset_right = 292.0
+offset_bottom = 36.0
+text = "进行中：—"
+
+[node name="Target" type="Label" parent="Panel"]
+offset_left = 16.0
+offset_top = 40.0
+offset_right = 292.0
+offset_bottom = 66.0
+text = "目标地点：—"
+
+[node name="Distance" type="Label" parent="Panel"]
+offset_left = 16.0
+offset_top = 70.0
+offset_right = 292.0
+offset_bottom = 96.0
+text = "距离：—"

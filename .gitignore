@@ -1,0 +1,14 @@
+# Godot 自动生成的缓存目录
+.godot/
+
+# 含 API Key 的本地配置，不要提交（照 llm_config.cfg.example 建自己的）
+llm_config.cfg
+
+# 导出产物
+build/
+
+# 调试用的地形转储
+region_dump.json
+
+# 临时日志
+*.log

@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://scripts/npc.gd" id="1_npc"]
+[ext_resource type="Script" path="res://scripts/character_sprite.gd" id="2_sprite"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_npc"]
+size = Vector2(30, 34)
+
+[node name="NPC" type="Area2D" groups=["npcs"]]
+script = ExtResource("1_npc")
+npc_name = "村民"
+npc_role = "普通村民"
+personality = "普通村民，说话客气但没什么特点。"
+greetings = PackedStringArray("你好，旅行者。", "今天天气不错。")
+
+[node name="Sprite" type="Node2D" parent="."]
+script = ExtResource("2_sprite")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -17)
+shape = SubResource("RectangleShape2D_npc")
+
+[node name="Prompt" type="Label" parent="."]
+visible = false
+offset_left = -60.0
+offset_top = -78.0
+offset_right = 60.0
+offset_bottom = -52.0
+text = "按 E 交谈"
+horizontal_alignment = 1
